@@ -199,6 +199,78 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:textAllCaps="true"
+            android:text="Cola (12 oz.)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:onClick="decrementCola"/>
+
+            <TextView
+                android:id="@+id/cola_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="0"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:onClick="incrementCola"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="6dp"
+            android:textAllCaps="true"
+            android:text="Energy Drink (8 oz.)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:onClick="decrementEnergyDrink"/>
+
+            <TextView
+                android:id="@+id/energy_drink_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="0"/>
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:onClick="incrementEnergyDrink"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textAllCaps="true"
             android:text="Total Caffeine" />

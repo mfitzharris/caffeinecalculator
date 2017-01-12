@@ -78,11 +78,34 @@ public class MainActivity extends AppCompatActivity {
         displayGreenTea(greenTea);
     }
 
+    int cola = 0;
+
+    public void incrementCola(View view) {
+        cola = cola + 1;
+        displayCola(cola);
+    }
+
+    public void decrementCola(View view) {
+        cola = cola - 1;
+        displayCola(cola);
+    }
+
+    int energyDrink = 0;
+
+    public void incrementEnergyDrink(View view) {
+        energyDrink = energyDrink + 1;
+        displayEnergyDrink(energyDrink);
+    }
+
+    public void decrementEnergyDrink(View view) {
+        energyDrink = energyDrink - 1;
+        displayEnergyDrink(energyDrink);
+    }
     /**
      * This method is called when the calculate button is clicked.
      */
     public void calculateCaffeine(View view) {
-        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50) + (greenTea * 35);
+        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50) + (greenTea * 35) + (cola * 35) + (energyDrink * 85);
         displayMessage("You have consumed approximately " + caffeine + " mg of caffeine.");
     }
 
@@ -111,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayGreenTea(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.green_tea_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayCola(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.cola_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayEnergyDrink(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.energy_drink_text_view);
         quantityTextView.setText("" + number);
     }
 
