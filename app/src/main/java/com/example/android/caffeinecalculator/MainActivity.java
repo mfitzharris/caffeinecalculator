@@ -18,45 +18,60 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    int cupsOfCoffee = 0;
+    int coffee = 0;
 
     /**
      * This method is called when the plus button is clicked.
      */
-    public void increment(View view) {
-        cupsOfCoffee = cupsOfCoffee + 1;
-        display(cupsOfCoffee);
+    public void incrementCoffee(View view) {
+        coffee = coffee + 1;
+        displayCoffee(coffee);
     }
 
     /**
      * This method is called when the minus button is clicked.
      */
-    public void decrement(View view) {
-        cupsOfCoffee = cupsOfCoffee - 1;
-        display(cupsOfCoffee);
+    public void decrementCoffee(View view) {
+        coffee = coffee - 1;
+        displayCoffee(coffee);
     }
 
+    int espresso = 0;
+
+    /**
+     * This method is called when the plus button is clicked.
+     */
+    public void incrementEspresso(View view) {
+        espresso = espresso + 1;
+        displayEspresso(espresso);
+    }
+
+    /**
+     * This method is called when the minus button is clicked.
+     */
+    public void decrementEspresso(View view) {
+        espresso = espresso - 1;
+        displayEspresso(espresso);
+    }
     /**
      * This method is called when the order button is clicked.
      */
     public void calculateCaffeine(View view) {
-        displayMessage("There are approximately " + (cupsOfCoffee * 95) + " mg of caffeine in " + cupsOfCoffee + " cups of coffee.");
+        int caffeine = (coffee * 150) + (espresso * 60);
+        displayMessage("You have consumed approximately " + caffeine + " mg of caffeine.");
     }
 
     /**
      * This method displays the given quantity value on the screen.
      */
-    private void display(int number) {
-        TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
+    private void displayCoffee(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.coffee_text_view);
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.caffeine_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+    private void displayEspresso(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.espresso_text_view);
+        quantityTextView.setText("" + number);
     }
 
     /**

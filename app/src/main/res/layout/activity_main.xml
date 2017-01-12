@@ -14,9 +14,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="6dp"
         android:textAllCaps="true"
-        android:text="Cups Of Coffee" />
+        android:text="Coffee (cups)" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,10 +27,10 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="-"
-            android:onClick="decrement"/>
+            android:onClick="decrementCoffee"/>
 
         <TextView
-            android:id="@+id/quantity_text_view"
+            android:id="@+id/coffee_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -42,9 +42,46 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:text="+"
-            android:onClick="increment"/>
+            android:onClick="incrementCoffee"/>
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:textAllCaps="true"
+        android:text="Espresso (shots)" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:onClick="decrementEspresso"/>
+
+        <TextView
+            android:id="@+id/espresso_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="0"/>
+
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:onClick="incrementEspresso"/>
+
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
