@@ -20,17 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     int coffee = 0;
 
-    /**
-     * This method is called when the plus button is clicked.
-     */
     public void incrementCoffee(View view) {
         coffee = coffee + 1;
         displayCoffee(coffee);
     }
 
-    /**
-     * This method is called when the minus button is clicked.
-     */
     public void decrementCoffee(View view) {
         coffee = coffee - 1;
         displayCoffee(coffee);
@@ -38,26 +32,45 @@ public class MainActivity extends AppCompatActivity {
 
     int espresso = 0;
 
-    /**
-     * This method is called when the plus button is clicked.
-     */
     public void incrementEspresso(View view) {
         espresso = espresso + 1;
         displayEspresso(espresso);
     }
 
-    /**
-     * This method is called when the minus button is clicked.
-     */
     public void decrementEspresso(View view) {
         espresso = espresso - 1;
         displayEspresso(espresso);
     }
+
+    int decaf = 0;
+
+    public void incrementDecaf(View view) {
+        decaf = decaf + 1;
+        displayDecaf(decaf);
+    }
+
+    public void decrementDecaf(View view) {
+        decaf = decaf - 1;
+        displayDecaf(decaf);
+    }
+
+    int blackTea = 0;
+
+    public void incrementBlackTea(View view) {
+        blackTea = blackTea + 1;
+        displayBlackTea(blackTea);
+    }
+
+    public void decrementBlackTea(View view) {
+        blackTea = blackTea - 1;
+        displayBlackTea(blackTea);
+    }
+
     /**
      * This method is called when the order button is clicked.
      */
     public void calculateCaffeine(View view) {
-        int caffeine = (coffee * 150) + (espresso * 60);
+        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50);
         displayMessage("You have consumed approximately " + caffeine + " mg of caffeine.");
     }
 
@@ -71,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayEspresso(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.espresso_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayDecaf(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.decaf_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayBlackTea(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.black_tea_text_view);
         quantityTextView.setText("" + number);
     }
 
