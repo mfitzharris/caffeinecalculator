@@ -66,11 +66,23 @@ public class MainActivity extends AppCompatActivity {
         displayBlackTea(blackTea);
     }
 
+    int greenTea = 0;
+
+    public void incrementGreenTea(View view) {
+       greenTea = greenTea + 1;
+        displayGreenTea(greenTea);
+    }
+
+    public void decrementGreenTea(View view) {
+        greenTea = greenTea - 1;
+        displayGreenTea(greenTea);
+    }
+
     /**
-     * This method is called when the order button is clicked.
+     * This method is called when the calculate button is clicked.
      */
     public void calculateCaffeine(View view) {
-        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50);
+        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50) + (greenTea * 35);
         displayMessage("You have consumed approximately " + caffeine + " mg of caffeine.");
     }
 
@@ -94,6 +106,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayBlackTea(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.black_tea_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayGreenTea(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.green_tea_text_view);
         quantityTextView.setText("" + number);
     }
 
