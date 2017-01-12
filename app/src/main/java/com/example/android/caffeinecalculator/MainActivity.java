@@ -101,11 +101,25 @@ public class MainActivity extends AppCompatActivity {
         energyDrink = energyDrink - 1;
         displayEnergyDrink(energyDrink);
     }
+
+    int energyShot = 0;
+
+    public void incrementEnergyShot(View view) {
+        energyShot = energyShot + 1;
+        displayEnergyShot(energyShot);
+    }
+
+    public void decrementEnergyShot(View view) {
+        energyShot = energyShot - 1;
+        displayEnergyShot(energyShot);
+    }
+
     /**
      * This method is called when the calculate button is clicked.
      */
     public void calculateCaffeine(View view) {
-        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50) + (greenTea * 35) + (cola * 35) + (energyDrink * 85);
+        int caffeine = (coffee * 150) + (espresso * 60) + (decaf * 6) + (blackTea * 50) +
+                (greenTea * 35) + (cola * 35) + (energyDrink * 85) + (energyShot * 204);
         displayMessage("You have consumed approximately " + caffeine + " mg of caffeine.");
     }
 
@@ -144,6 +158,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayEnergyDrink(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.energy_drink_text_view);
+        quantityTextView.setText("" + number);
+    }
+
+    private void displayEnergyShot(int number) {
+        TextView quantityTextView = (TextView) findViewById(R.id.energy_shot_text_view);
         quantityTextView.setText("" + number);
     }
 
