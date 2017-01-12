@@ -14,6 +14,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#fff7d4"
         android:orientation="vertical"
         tools:context="com.example.android.caffeinecalculator.MainActivity">
 
@@ -22,6 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
             android:textAllCaps="true"
+
             android:text="Coffee (cups)" />
 
         <LinearLayout
@@ -32,6 +34,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementCoffee"/>
 
@@ -47,6 +50,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementCoffee"/>
 
@@ -68,6 +72,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementEspresso"/>
 
@@ -83,6 +88,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementEspresso"/>
 
@@ -104,6 +110,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementDecaf"/>
 
@@ -119,6 +126,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementDecaf"/>
 
@@ -140,6 +148,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementBlackTea"/>
 
@@ -155,6 +164,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementBlackTea"/>
 
@@ -176,6 +186,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementGreenTea"/>
 
@@ -191,6 +202,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementGreenTea"/>
 
@@ -212,6 +224,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementCola"/>
 
@@ -227,6 +240,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementCola"/>
 
@@ -248,6 +262,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementEnergyDrink"/>
 
@@ -263,6 +278,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementEnergyDrink"/>
 
@@ -284,6 +300,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="-"
                 android:onClick="decrementEnergyShot"/>
 
@@ -299,17 +316,20 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:background="#ffe822"
                 android:text="+"
                 android:onClick="incrementEnergyShot"/>
 
         </LinearLayout>
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#ffe822"
             android:layout_marginTop="16dp"
-            android:textAllCaps="true"
-            android:text="Total Caffeine" />
+            android:padding="16dp"
+            android:text="Calulate Total Caffeine"
+            android:onClick="calculateCaffeine"/>
 
         <TextView
             android:id="@+id/caffeine_text_view"
@@ -320,13 +340,6 @@
             android:textSize="16sp"
             android:textColor="@android:color/black"
             android:text="0 mg"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calulate Caffeine"
-            android:onClick="calculateCaffeine"/>
-
     </LinearLayout>
 
 </ScrollView>
